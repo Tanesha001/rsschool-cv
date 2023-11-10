@@ -33,3 +33,9 @@ return n.split("").reverse().join("");
 **Belarusian State Economic University** 
 
 Specialization: **Economics and management in the tourism industry**
+
+## Languages:
+* Russian - **Native**
+* Belarussian - **Native**
+* English - **B2**
+* Spanish - **A2**
