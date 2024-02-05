@@ -26,7 +26,15 @@ body {
 
 .header {
     background-color: #cfd1c0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 2%;
 }
+
+.header-burger{ 
+    display: none; 
+} 
 
 .nav {
     padding-left: 40%;
@@ -169,3 +177,124 @@ h2 {
     font-size: 24px;
     font-weight: 700;
 }
+
+
+@media (max-width: 920px) {
+    .nav {
+        padding-left: 10%;
+    }    
+}
+
+@media (max-width: 695px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .photo {
+        width: 50%;
+        margin: 0 25%;
+    }
+
+    .nav {
+        padding-left: 2%;
+    }  
+    
+    .project-pic {
+        width: 90%;
+    }
+
+    .header {
+        min-height: 50px;
+    }
+    
+    .header-burger{ 
+    display: block;
+    position: relative; 
+    width: 40px; 
+    height: 24px; 
+    z-index: 2; 
+    } 
+    
+    .header-burger span { 
+    position: absolute; 
+    width: 40px; 
+    height: 2px; 
+    background-color: #717171; 
+    transition: 0.5s;
+    } 
+  
+    .header-burger span:nth-child(1){ 
+      top: calc(0% + 8px);
+    } 
+      
+    .header-burger span:nth-child(2){ 
+      top: calc(0% + 16px);
+    } 
+      
+    .header-burger span:nth-child(3){ 
+      top: calc(0% + 24px);
+    } 
+    
+    .nav { 
+      position: fixed; 
+      right: 0px; 
+      top: 0px; 
+      width: 100%; 
+      height: 100%;
+      background-color: hwb(0 18% 81% / 0.9); 
+      padding: 120px 0px 20px 20px; 
+      transform: translateX(100%);
+      transition: transform .7s; 
+    } 
+  
+    .nav.active {
+      padding-top: 30%;
+      transform: translateX(0%);
+    }
+  
+    .header-burger.active span:nth-child(1){ 
+      opacity: 0;
+    } 
+      
+    .header-burger.active span:nth-child(2){ 
+      opacity: 0;
+    } 
+      
+    .header-burger.active span:nth-child(3){   
+      top: 50%;
+      transform: rotate(45deg);
+    } 
+  
+    .header-burger.active span:nth-child(4){ 
+      top: 50%;
+      transform: rotate(-45deg);
+    } 
+  
+    body.lock {
+      overflow: hidden;
+    }
+    
+    .navigation{ 
+        flex-direction: column;
+        background-color: transparent;
+    } 
+        
+    .navigation-item{ 
+        color: white; 
+        font-size: 48px; 
+        display: block;
+        margin-bottom: 10%; 
+        text-decoration: none;
+    } 
+        
+    .navigation-item:hover, .navigation-item:focus, .navigation-item:active{ 
+        color: #E06733; 
+        opacity: .75; 
+        transition-duration: 1s; 
+    } 
+}  
+
